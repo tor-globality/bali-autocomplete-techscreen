@@ -1,0 +1,50 @@
+{
+    "name": "autocomplete-challenge",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [],
+    "license": "UNLICENSED",
+    "type": "module",
+    "dependencies": {
+        "@types/styled-components": "4.4.3",
+        "lodash": "4.17.21",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "styled-components": "4.4.1",
+        "vite": "3.0.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.0",
+        "@babel/preset-env": "^7.16.4",
+        "@babel/preset-react": "^7.16.0",
+        "@babel/preset-typescript": "^7.16.0",
+        "@testing-library/react": "13.3.0",
+        "@types/react": "18.0.14",
+        "@types/react-dom": "18.0.5",
+        "concurrently": "7.2.2",
+        "jest": "^26.6.3",
+        "json-server": "0.17.0",
+        "process": "^0.11.10",
+        "ts-node": "10.8.1",
+        "typescript": "4.4.2"
+    },
+    "scripts": {
+        "start": "concurrently -n *,* --kill-others \"npm:serve-*\"",
+        "serve-app": "vite --port 8080",
+        "serve-api": "json-server server/db.json",
+        "test": "TZ=UTC NODE_ENV=test jest --maxWorkers 4 --watchAll"
+    },
+    "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
+    "jest": {
+        "globals": {
+            "DEBUG": false
+        },
+        "setupFiles": ["./src/setupTests.ts"],
+        "testEnvironment": "jsdom",
+        "moduleDirectories": ["node_modules", "."],
+        "moduleFileExtensions": ["js", "jsx", "ts", "tsx"],
+        "testMatch": ["**/*.(spec|test).[jt]s?(x)"],
+        "testPathIgnorePatterns": ["/node_modules/", "/coverage/", "/dist/"],
+        "coveragePathIgnorePatterns": [".styles.[jt]sx?"]
+    }
+}
