@@ -10,7 +10,7 @@ export interface AutocompleteProps {
 
 export const API_ENDPOINT = 'https://9se1qb-3000.sse.codesandbox.io/users';
 
-const Autocomplete: React.FC<AutocompleteProps> = ({ onChange }) => {
+function Autocomplete({ onChange }: AutocompleteProps) {
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
     const [inputValue, setInputValue] = React.useState<string>('');
 
