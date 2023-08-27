@@ -1,10 +1,12 @@
 import React from 'react';
-import { User } from 'src/types';
+import { User } from '../../types';
 
 interface TeamListProps {
     users: User[];
 }
 
-const TeamList: React.VFC<TeamListProps> = ({ users }) => <div></div>;
+function TeamList({ users }: TeamListProps) {
+    return <div>{/* TODO display list of users */}</div>;
+}
 
 export default TeamList;

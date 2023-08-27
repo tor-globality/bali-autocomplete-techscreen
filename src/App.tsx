@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Autocomplete from './components/Autocomplete';
-import TeamList from './components/TeamList';
+import { Autocomplete } from './components/Autocomplete';
+import { TeamList } from './components/TeamList';
 
 import Styled from './App.styles';
 
-const App: React.VFC = () => {
+function App() {
     return (
         <Styled.App>
             <Styled.GlobalStyle />
@@ -22,6 +22,6 @@ const App: React.VFC = () => {
             </Styled.AppContainer>
         </Styled.App>
     );
-};
+}
 
 export default App;
