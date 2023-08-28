@@ -8,7 +8,7 @@ export interface AutocompleteProps {
     onChange?(selectedValues: User[]): void;
 }
 
-export const API_ENDPOINT = 'https://9se1qb-3000.sse.codesandbox.io/users';
+export const API_ENDPOINT = 'https://6rpxjg-3000.csb.app/users';
 
 function Autocomplete({ onChange }: AutocompleteProps) {
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
@@ -56,6 +56,6 @@ function Autocomplete({ onChange }: AutocompleteProps) {
             )}
         </Styled.Container>
     );
-};
+}
 
 export default Autocomplete;
